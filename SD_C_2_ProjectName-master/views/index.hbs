@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpensrcSTEM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/user_functions.js"></script>
+    <script src="/js/dash_functions.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <br>
+    <br>
+    <div class="float-right" style="font-size: larger">
+        <h1> Open<span style="color: red;">src</span>STEM</h1>
+    </div>
+    <br>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <button id="trending" class="nav-link button_pretty"><h3>Trending</h3></button>
+        </li>
+        <li class="nav-item">
+            <button id="top" class="nav-link button_pretty"><h3>Top</h3></button>
+        </li>
+        <li class="nav-item">
+            <button id="new" class="nav-link button_pretty"><h3>&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;</h3></button>
+        </li>
+        <li class="nav-item">
+            <button type="button" onclick="view_switch('/dashboard')" class="nav-link button_pretty"><h3>Courses</h3></button>
+        </li>
+        <li class="nav-item">
+            <button onclick="view_switch('/dashboard')" class="nav-link button_pretty"><h3>Community</h3></button>
+        </li>
+    </ul>
+    <hr>
+    <div class="row" style="margin: 5px;">
+        <div class="col" style="background-color: #eeeeee; padding: 10px;">
+            <div id="classroom_div" class="row">
+
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="jumbotron form-group">
+                <h3>Open<span style="color: red;">src</span>STEM</h3>
+                <hr>
+                <form
+                        action="/login"
+                        method="post">
+
+
+                    <div class="textbox">
+                        <input
+                                type="text"
+                                name="username"
+                                required/>
+
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Username</label>
+                    </div>
+
+                    <div class="textbox">
+                        <input
+                                type="password"
+                                name="password"
+                                required/>
+
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Password</label>
+                    </div>
+
+                    <input type="submit" class="button_pretty float-right"/>
+                </form>
+            </div>
+            <div class="alert">
+                {{#if msg}}
+                    <div class='alert alert-danger alert-dismissable'>
+                        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                        <strong>{{msg}}</strong>
+                    </div>
+                {{/if}}
+            </div>
+            <div class="container-center">
+                <p>Don't have an account? Sign up today!</p>
+                <button type="button" class="button_pretty" onclick="view_switch('/signup')">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <br><br><hr>
+
+    <!--<footer class="footer">-->
+        <div class="row" style="background-color: #ff6666">
+            <div class="justify-content-center" style="float: none; margin: 0 auto;">
+                <button class="button_pretty2"><img width="15" height="15" src="/img/boldee_icon_update_isolated_87.png">
+                </button>
+
+                <button class="button_pretty2"><img width="15" height="12" src="/img/boldee_icon_update_isolated_91.png">
+                </button>
+
+                <button id="twitter" class="button_pretty2"><img width="15" height="15" src="img/boldee_isolated_icon_235.png">
+                </button>
+            </div>
+        </div>
+    <!--</footer>-->
+</div>
+
+</body>
+</html>
+
+
+<script>
+
+    $(document).ready(function () {
+       trendingCourses();
+    });
+
+    $('#trending').click(function () {
+        trendingCourses();
+    });
+
+    $('#top').click(function(){
+        topCourses();
+    });
+
+    $('#new').click(function () {
+        newCourses();
+    });
+
+    $('#twitter').click(function () {
+       window.location.href = "https://twitter.com/OpenSrcStem";
+    })
+
+</script>

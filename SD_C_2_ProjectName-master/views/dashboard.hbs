@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <title>OpensrcSTEM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/f5f8ce0ef3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+    <script src="/js/user_functions.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script type="text/javascript" src="/js/user_functions.js"></script>
+    <script src="/js/profile_functions.js"></script>
+    <script type="text/javascript" src="/js/classroom_functions.js"></script>
+    <script src="/js/user_functions.js"></script>
+    <script src="/js/dash_functions.js"></script>
+    <script src="/js/profile_functions.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="float-right">
+            <div class="row">
+                <div class="col">
+                    <button class="button_norm"><span id="name"></span></button>
+                    <br>
+                    <form
+                            method="get"
+                            action="/logout"
+                    >
+                        <button type="submit" style="color: blue" class="button_norm">Logout</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <button class="button_norm float-right" onclick="view_switch('/profile')">
+                        <img src="/img/placeholder.png" height="70" width="70" id="profilePic" class="img-thumbnail"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <form class="float-left">
+            <input class="form-control" type="text" id="classToSearch" placeholder="Search" required/>
+            <button id="search" type="button" class="button_pretty" >Submit</button>
+        </form>
+        <br>
+        <div class="float-right" style="font-size: larger">
+            <h1> Open<span style="color: red;">src</span>STEM</h1>
+        </div>
+        <br>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <button id="trending" class="nav-link button_pretty"><h3>Trending</h3></button>
+            </li>
+            <li class="nav-item">
+                <button id="top" class="nav-link button_pretty"><h3>Top</h3></button>
+            </li>
+            <li class="nav-item">
+                <button id="new" class="nav-link button_pretty"><h3>&nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;</h3></button>
+            </li>
+            <li class="nav-item">
+                <button id="community" class="nav-link button_pretty"><h3>Community</h3></button>
+            </li>
+            <li class="nav-item">
+                <button id="courses" class="nav-link button_pretty"><h3>Courses</h3></button>
+            </li>
+        </ul>
+        <hr>
+
+        <div class="row">
+            <div class="col" style="background-color: #eeeeee; padding: 10px;">
+                    <div id="classroom_div" class="row">
+
+                    </div>
+            </div>
+        </div>
+
+        <br><br><hr>
+
+        <div id="alert"></div>
+
+        <!--<footer class="footer">-->
+        <div class="row" style="background-color: #ff6666">
+            <div class="justify-content-center" style="float: none; margin: 0 auto;">
+                <button class="button_pretty2"><img width="15" height="15" src="/img/boldee_icon_update_isolated_87.png">
+                </button>
+
+                <button class="button_pretty2"><img width="15" height="12" src="/img/boldee_icon_update_isolated_91.png">
+                </button>
+
+                <button id="twitter" class="button_pretty2"><img width="15" height="15" src="img/boldee_isolated_icon_235.png">
+                </button>
+            </div>
+        </div>
+        <!--</footer>-->
+    </div>
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function () {
+        sessionUser();
+        getProfilePic();
+        trendingCourses();
+    });
+
+    $('#trending').click(function () {
+        trendingCourses();
+    });
+
+    $('#top').click(function(){
+        topCourses();
+    });
+
+    $('#new').click(function () {
+        newCourses();
+    });
+
+    $('#twitter').click(function () {
+        window.location.href = "https://twitter.com/OpenSrcStem";
+    });
+
+    $('#courses').click(function () {
+        allCourses();
+    });
+
+    $('#community').click(function () {
+       getCommunity();
+    });
+
+    $('#search').click(function () {
+        searchForClasses();
+    })
+
+</script>

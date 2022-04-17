@@ -1,0 +1,264 @@
+[33mcommit 6b8df532c583d290d9abdaaf9c364996a33db169[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Nov 5 12:48:59 2017 -0600
+
+    Now we can create student objects after Jeff 're-fixed' the addGradeObject method
+
+[33mcommit 1cb9adee3235a31c9d04c7e829d8fcab83643a6f[m
+Merge: 7b2033f 3b45369
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Nov 5 12:28:50 2017 -0600
+
+    Merge branch 'master' of https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName
+
+[33mcommit 7b2033f027cadef5d07544fc5a8e1be06796c76e[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Nov 5 12:28:46 2017 -0600
+
+    fixed a db bug caused by/exposed by Paul. Henceforth all 309 Project Members require level 10 access to DB.
+
+[33mcommit 4922823bc92530e966c994da4d4f5cb848ab9683[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Nov 5 11:39:02 2017 -0600
+
+    Deletion of classes works
+
+[33mcommit 3b45369e45df2c1c4bf64266948d86de86ab3a71[m
+Author: Justin <jagordon@iastate.edu>
+Date:   Sun Nov 5 10:57:13 2017 -0600
+
+    cropper in play?
+
+[33mcommit 264c02d17605e869bb38de53d7af1b924a4eddec[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Fri Nov 3 10:57:27 2017 -0500
+
+    add/remove student as well as addClass ready to use
+
+[33mcommit b46a402c934caed7a2620a08b0b39ea464b0c1cd[m
+Merge: a0160a8 ab99eaf
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Thu Nov 2 21:18:20 2017 -0500
+
+    ip change
+
+[33mcommit a0160a8ca8f62e058d02305057d3bc521593ae3e[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Thu Nov 2 21:17:23 2017 -0500
+
+    ip change
+
+[33mcommit ab99eaf37bd3db005ff62bf8fc61d137771c7cca[m
+Author: Sovann20 <sovannchak20@live.com>
+Date:   Tue Oct 31 17:44:12 2017 -0500
+
+    More classroom stuff
+
+[33mcommit 1502bd3b7bfd4590c058651689f95f8d1693c1f2[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Tue Oct 31 12:22:45 2017 -0500
+
+    fix bugs  in updateFollowers
+
+[33mcommit a03434276f95bc265533062123058f04f3eb1b13[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Tue Oct 31 12:16:13 2017 -0500
+
+    add updateFollowers method, needs testing
+
+[33mcommit dd40476d5a537fa333a97fdf24c93ecc777506c5[m
+Merge: d0cfc19 7356c23
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Tue Oct 31 11:10:45 2017 -0500
+
+    Merge branch 'master' of https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName
+
+[33mcommit d0cfc19e4d60622bc2c03c4cc72f8700674d6af8[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Tue Oct 31 11:10:37 2017 -0500
+
+    deleteStudentGradeObj works, 90% of grade database methods/infrastructure working
+
+[33mcommit 7356c239f04c6d570bb67fdc0bbde5509522f950[m
+Author: Sovann20 <sovannchak20@live.com>
+Date:   Tue Oct 31 10:39:18 2017 -0500
+
+    Adding classrooms stuff
+
+[33mcommit 74894d80720b7b0acae80b89713a6069acc398a8[m
+Author: Sovann20 <sovannchak20@live.com>
+Date:   Sun Oct 29 14:08:33 2017 -0500
+
+    Hopefully this shit works
+
+[33mcommit 39b82095aa921154edb5e82d8e275da3669f45a4[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Oct 29 13:51:28 2017 -0500
+
+    Fized Bracket Error
+
+[33mcommit 01640711f98c5329d9008dae7b24b686f0fa93d7[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Oct 29 13:50:03 2017 -0500
+
+    Fized Bracket Error
+
+[33mcommit ddb35925a7b1524279fdefec6d658fc5a26ac10c[m
+Merge: a0165e1 68a7338
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 13:32:41 2017 -0500
+
+    Merge branch 'master' of https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName
+
+[33mcommit a0165e115e8152f66be258e1622783cfd183e087[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 13:32:37 2017 -0500
+
+    save
+
+[33mcommit 68a7338c54d9197e5a574add7c67c12ad9e70eed[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Oct 29 13:28:04 2017 -0500
+
+    I hope the merge was successful
+
+[33mcommit eccddeeb31e4a80813424b0ae0e43d1a3fd3ffd4[m
+Merge: 1e19d43 116cc79
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Oct 29 13:27:09 2017 -0500
+
+    I hope the merge was successful
+
+[33mcommit 1e19d43815b52529a4fc39077c51dcdb15b8ad26[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Oct 29 13:24:14 2017 -0500
+
+    IT WORKS...teachers addding students to their respective classes
+
+[33mcommit 116cc7986e01d4ca6e715deaac44f550f592928f[m
+Author: Sovann20 <sovannchak20@live.com>
+Date:   Sun Oct 29 13:09:23 2017 -0500
+
+    Changing up profile a bit
+
+[33mcommit 87a7a4c0d7cd1cdc671b29ada85609d1797fce2f[m
+Merge: 7432bb1 b55322f
+Author: Justin <jagordon@iastate.edu>
+Date:   Sun Oct 29 13:03:48 2017 -0500
+
+    Merge branch 'master' of https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName
+
+[33mcommit 7432bb19205a9853e9909383b45696c96e1879bf[m
+Author: Justin <jagordon@iastate.edu>
+Date:   Sun Oct 29 13:03:38 2017 -0500
+
+    accidently broke everything but then added a comma and fixed
+
+[33mcommit b55322f89e06b3bedf7692055f104f37199f086e[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Oct 29 12:56:15 2017 -0500
+
+    Adding students to class should now work
+
+[33mcommit 39a4937fd997efed26f7ed1c972bf2800fb5c4d3[m
+Merge: 232e549 defb039
+Author: Justin <jagordon@iastate.edu>
+Date:   Sun Oct 29 12:52:21 2017 -0500
+
+    Merge branch 'master' of https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName
+
+[33mcommit 232e54904a550f40a54c5912d365ef71dc4e1b4a[m
+Author: Justin <jagordon@iastate.edu>
+Date:   Sun Oct 29 12:52:07 2017 -0500
+
+    changes to naming conventions
+
+[33mcommit defb03975a2d2128cb521180e7336a462c8f7d0b[m
+Author: Paul Lubberstedt <paullubb@iastate.edu>
+Date:   Sun Oct 29 12:49:48 2017 -0500
+
+    rudimentary student addition
+
+[33mcommit c6a450c950446ee8bd73c9a568dc710fea8afbf7[m
+Merge: 312ade2 8b036ac
+Author: Justin <jagordon@iastate.edu>
+Date:   Sun Oct 29 12:42:14 2017 -0500
+
+    Merge branch 'master' of https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName
+
+[33mcommit 312ade293a29334439d7958da2f282f70e481312[m
+Author: Justin <jagordon@iastate.edu>
+Date:   Sun Oct 29 12:41:45 2017 -0500
+
+    improvise, adapt, overcome, change DOB and school ajax
+
+[33mcommit 8b036ac31bc60140f0914ab113a33073f617b1ee[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 12:35:00 2017 -0500
+
+    getStudentGradeObj and addStudentGradeObj work correctly
+
+[33mcommit 16a480309f404b44447bb261f3367754216c9362[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 11:30:46 2017 -0500
+
+    delete studentGradeObj works! Take that mongo queries!
+
+[33mcommit e33fd24a8be726ba22f2d4f279e5f1c24e833dc0[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 10:58:41 2017 -0500
+
+    changeUserType method add
+
+[33mcommit ed33367a8eeaef6d84f2ce88b03ba8e5d2a6a1ed[m
+Merge: 8feb3fa 93fe7e1
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 10:34:44 2017 -0500
+
+    Merge branch 'master' of https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName
+
+[33mcommit 8feb3fabff866453865fb56426451ee9c887b238[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 10:34:41 2017 -0500
+
+    save
+
+[33mcommit 93fe7e17bcca35524675d7ddd8d038eb3685d001[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sun Oct 29 09:28:44 2017 -0500
+
+    ip change\
+
+[33mcommit 3ddfa50c15939fef6748e148425678e8d23d69a7[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Sat Oct 28 16:16:51 2017 -0500
+
+    small work with grade methods
+
+[33mcommit 8f7413e6c2d137f8ebabd70f665dbfd3bc56a0e7[m
+Merge: 9ae214e 8d723cf
+Author: Sovann20 <sovannchak20@live.com>
+Date:   Fri Oct 27 09:20:48 2017 -0500
+
+    Nothing has been changed
+
+[33mcommit 8d723cffa5d3408798a219bb515d20e14f832a24[m
+Author: Jeff Yokup <jyokup@iastate.edu>
+Date:   Thu Oct 26 18:34:30 2017 -0500
+
+    getStudentGradeObj done, needs testing
+
+[33mcommit 9ae214e0ce12e59a7a6691a18b0bb4799725415a[m
+Author: Sovann20 <sovannchak20@live.com>
+Date:   Thu Oct 26 18:02:05 2017 -0500
+
+    server test
+
+[33mcommit 60fefd295eb454069d3997b4d70dd17fb6b053be[m
+Author: Sovann20 <sovannchak20@live.com>
+Date:   Thu Oct 26 17:55:12 2017 -0500
+
+    server test
+
+[33mcommit 46660692ae7e0bc6602ed397bd26472aeecd5f8e[m
+Author: Sovann

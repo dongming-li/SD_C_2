@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/f5f8ce0ef3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+    <script src="/js/user_functions.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script type="text/javascript" src="/js/user_functions.js"></script>
+    <script src="/js/profile_functions.js"></script>
+    <script type="text/javascript" src="/js/classroom_functions.js"></script>
+</head>
+<body style="margin: 5px;">
+
+<div class="container-fluid" style="background-color: #eeeeee; padding: 5px;">
+    <div class="float-right">
+        <div class="row">
+            <div class="col">
+                <button class="button_norm"><span id="name"></span></button>
+                <br>
+                <form
+                        method="get"
+                        action="/logout"
+                >
+                    <button type="submit" style="color: blue" class="button_norm">Logout</button>
+                </form>
+            </div>
+            <div class="col">
+                <button class="button_norm float-right" onclick="view_switch('/profile')">
+                    <img src="/img/placeholder.png" height="70" width="70" id="profilePic" class="img-thumbnail"/>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="float-left" style="font-size: larger">
+        <h1> Open<span style="color: red;">src</span>STEM</h1>
+    </div>
+    <br>
+    <ul style="padding-left: 50px" class="nav">
+        <li class="nav-item">
+            <button class="nav-link button_pretty" onclick="view_switch('/dashboard')"><h3>Dashboard</h3></button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link button_pretty" onclick="view_switch('/dashboard')"><h3>Search</h3></button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link button_pretty" onclick="view_switch('/dashboard')"><h3>Help</h3></button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link button_pretty" onclick="view_switch('/dashboard')"><h3>Courses</h3></button>
+        </li>
+    </ul>
+</div>
+<br>
+<div style="padding: 10px;" class="container-fluid">
+    <div class="row">
+        <div style="background-color: #eeeeee;" class="col-sm-2">
+
+            {{#if student}}
+                <div class="btn-group-vertical">
+
+                    <button class="btn button_pretty" id="class_description"><h3>Class Description</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_announcements"><h3>Announcements</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_grades"><h3>Grades</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_files"><h3>Files</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_submissions"><h3>Submissions</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_discussions"><h3>Discussions</h3></button>
+                    <br>
+                </div>
+            {{/if}}
+
+            {{#if visitor}}
+                <div class="btn-group-vertical">
+
+                    <button class="btn button_pretty" id="class_description"><h3>Class Description</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_announcements"><h3>Announcements</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_files"><h3>Files</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_discussions"><h3>Discussions</h3></button>
+                    <br>
+                </div>
+            {{/if}}
+
+            {{#if educator}}
+                <div class="btn-group-vertical">
+
+                    <button class="btn button_pretty" id="class_description"><h3>Class Description</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="add_students"><h3>Add Students</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_announcements"><h3>Announcements</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="post_grades"><h3>View Grades</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="post_files"><h3>Post Files</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="view_submissions"><h3>View Submissions</h3></button>
+                    <br>
+
+                    <button class="btn button_pretty" id="_discussions"><h3>Discussions</h3></button>
+                    <br>
+                </div>
+            {{/if}}
+
+        </div>
+        <br>
+        <div style="background-color: #eeeeee; margin-left: 10px; padding: 10px;" class="col" id="classroom_div">
+            <h3 class="display-3" style="padding: 5px; background-color: white"
+                id="classroom_name">{{classroom_name}}</h3>
+
+            <div style=" background-color: white;" id="information" class="container-fluid">
+
+            </div>
+        </div>
+    </div>
+
+{{#if student}}
+        <div class="float-right" style="padding: 5px; background-color: #eeeeee; margin-top: 10px;">
+            <div id="thumbs" class="float-right">
+
+            </div>
+        </div>
+{{/if}}
+
+{{#if visitor}}
+    <div class="float-right" style="padding: 5px; background-color: #eeeeee; margin-top: 10px;">
+        <div id="thumbs" class="float-right">
+
+        </div>
+    </div>
+{{/if}}
+
+{{#if educator}}
+    <div class="row" style="padding: 5px; background-color: #eeeeee; margin-top: 10px;">
+        <div class="col">
+
+            <div class="header_div float-left" style="padding-left: 5px; padding-right: 5px; margin-bottom: 3px">
+                <h5>Change the Class Description</h5>
+            </div>
+            <input class="form-control" id="newDescription" type="text" required/><br>
+            <input id="updateDescription" class="button_pretty" placeholder="Submit" type="submit"/>
+        </div>
+    </div>
+
+    <div class="row" style="padding: 5px; background-color: #eeeeee; margin-top: 10px;">
+        <div class="col" id="announcement_div">
+
+            <div class="header_div float-left" style="padding-left: 5px; padding-right: 5px; margin-bottom: 3px">
+                <h5>Make an Announcement</h5>
+            </div>
+            <input class="form-control" id="announcementToAdd" type="text"/><br>
+            <input id="makeAnnouncement" class="button_pretty" placeholder="Submit" type="submit"/>
+        </div>
+
+    </div>
+{{/if}}
+  <input type="file" id="uploadFile" /><button onclick="uploadFile()">Upload</button>
+<div id="alert">
+
+</div>
+</div>
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        sessionUser();
+        getProfilePic();
+        fillClassDescription();
+        isClassLiked();
+    });
+
+    $(document).on('click', '#addStudentToClass', function () {
+        addStudent();
+        viewStudents();
+    });
+
+    $(document).on('click', '#like', function () {
+        likeClass();
+    });
+
+    $(document).on('click', '#dislike', function () {
+        unlikeClass();
+    });
+
+    $('#class_description').click(function () {
+        fillClassDescription();
+    });
+
+    $('#add_students').click(function () {
+        viewStudents();
+    });
+
+    $('#_announcements').click(function () {
+        fillAnnouncements();
+    });
+
+    $('#makeAnnouncement').click(function () {
+        makeAnnouncement();
+        fillAnnouncements();
+        $('#announcementToAdd').val("");
+    });
+
+    $('#updateDescription').click(function () {
+        newClassDescription();
+        fillClassDescription();
+    });
+
+    $('#_grades').click(function () {
+      fillGradesStudent();
+    });
+
+    $('#_files').click(function () {
+      fillFiles();
+    });
+</script>

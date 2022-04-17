@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/user_functions.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br>
+            <h2>Sign Up</h2>
+            <form
+                    action="/signup"
+                    method="post"
+                    onsubmit="return authentication()">
+
+                <br>
+                <div class="textbox">
+                    <input
+                            type="text"
+                            name="firstname"
+                            required/>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>First Name</label>
+                </div>
+
+                <div class="textbox">
+                    <input
+                            type="text"
+                            name="lastname"
+                            required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Last Name</label>
+                </div>
+
+                <div class="textbox">
+                    <input
+                            type="text"
+                            name="username"
+                            required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Username</label>
+                </div>
+
+                <div class="textbox">
+                    <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            required/>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                </div>
+
+                <div class="textbox">
+                    <input
+                            type="email"
+                            id="confirm_email"
+                            required/>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Confirm Email</label>
+                </div>
+
+                <div class="textbox">
+                    <input
+                            type="password"
+                            name="password"
+                            id="pass"
+                            required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Password</label>
+                </div>
+
+                <div class="textbox">
+                    <input
+                            type="password"
+                            id="confirm_pass"
+                            required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Confirm Password</label>
+                </div>
+
+                <input type="radio" name="student" id="student" checked/> Student
+                <br>
+                <input type="radio" name="educator" id="educator" /> Educator
+                <br>
+                <br>
+                <input class="button_pretty" type="submit">
+            </form>
+            <br>
+        </div>
+        <div class="col">
+            <div class="alert">
+                {{#if msg}}
+                    <div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                        <strong>{{msg}}</strong>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="col">
+            <span style="font-size: larger">
+                <h1> Open<span style="color: red;">src</span>STEM</h1>
+            </span><hr>
+            <p>Do you already have an account? <br> Just log in!</p>
+            <button class="button_pretty" onclick="view_switch('/')">Log in</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+
+    $('#student').click(function () {
+        if($('#student').is(':checked')){
+            $('#student').prop("checked", true);
+            $('#educator').prop("checked", false);
+        }
+        else {
+            $('#student').prop("checked", false);
+            $('#educator').prop("checked", true);
+        }
+    });
+
+    $('#educator').click(function () {
+        if($('#educator').is(':checked')){
+            $('#educator').prop("checked", true);
+            $('#student').prop("checked", false);
+        }
+        else {
+            $('#educator').prop("checked", false);
+            $('#student').prop("checked", true);
+        }
+    })
+
+</script>

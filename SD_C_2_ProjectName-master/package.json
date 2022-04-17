@@ -1,0 +1,31 @@
+{
+  "name": "sd_c_2_projectname",
+  "version": "1.0.0",
+  "description": "OpensrcSTEM, changing digital eduaction.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://git.linux.iastate.edu/309Fall2017/SD_C_2_ProjectName.git"
+  },
+  "author": "Sovann, Paul, Jeffrey, Justin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "handlebars": "^4.0.10",
+    "jquery": "^3.2.1",
+    "mathjs": "^3.16.4",
+    "mongodb": "^2.2.31",
+    "nodemailer": "^4.1.3",
+    "qr-image": "^3.2.0"
+  }
+}
